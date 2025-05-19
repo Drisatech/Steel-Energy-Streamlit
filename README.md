@@ -46,3 +46,21 @@ Streamlit Community Cloud
 AWS EC2
 Docker container
 GCP App Engine
+
+## Author
+
+Aliyu Idris
+drisatech.com
+
+---
+
+### **2. `requirements.txt`** (for dependency management)
+
+```text
+streamlit
+scikit-learn
+xgboost
+pandas
+numpy
+joblib
+matplotlib
