@@ -1,5 +1,5 @@
 import joblib
 
-# Save model and preprocessing objects
-joblib.dump(models['XGBoost'], 'energy_model.pkl')  # Best performing model
+# Save model and scaler separately
+joblib.dump(model, 'energy_model.pkl')
 joblib.dump(scaler, 'scaler.pkl')

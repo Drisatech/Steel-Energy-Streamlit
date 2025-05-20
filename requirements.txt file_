@@ -1,8 +1,0 @@
-pip freeze > requirements.txt
-steel_energy_app/
-│
-├── app.py                  # Your Streamlit frontend logic
-├── energy_model.pkl       # Saved model
-├── scaler.pkl              # If you used StandardScaler
-├── requirements.txt
-└── dataset.csv             # Optional if you include sample data
