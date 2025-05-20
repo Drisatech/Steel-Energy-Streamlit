@@ -6,6 +6,8 @@ import joblib
 model = joblib.load('energy_model.pkl')
 scaler = joblib.load('scaler.pkl')
 
+st.title("Steel Industry Energy Consumption Prediction App")
+
 # Streamlit inputs
 day = st.selectbox('Day of Week', ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'])
 lagging = st.number_input('Lagging_Current_Reactive.Power_kVarh')
