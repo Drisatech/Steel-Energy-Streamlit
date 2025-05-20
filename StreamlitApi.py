@@ -13,7 +13,7 @@ lagging_reactive = st.number_input("Lagging Current Reactive Power (kVarh)", min
 leading_reactive = st.number_input("Leading Current Reactive Power (kVarh)", min_value=0.0)
 lagging_pf = st.number_input("Lagging Current Power Factor", min_value=0.0, max_value=1.0)
 leading_pf = st.number_input("Leading Current Power Factor", min_value=0.0, max_value=1.0)
-hour = st.slider("Hour of Day (0-24)", min_value=0, max_value=23)
+hour = st.slider("Hour of Day (0-24)", min_value=0, max_value=24)
 
 day = st.selectbox("Select Day of the Week", [
     "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"
