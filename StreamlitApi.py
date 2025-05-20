@@ -7,7 +7,7 @@ model = joblib.load('energy_model.pkl')
 scaler = joblib.load('scaler.pkl')
 
 # Page config
-st.set_page_config(page_title="Steel Energy Prediction", layout="centered")
+st.set_page_config(page_title="Steel Energy Prediction Web App", layout="centered")
 
 # App title
 st.markdown("<h1 style='text-align: center; color: steelblue;'>Steel Energy Consumption Predictor</h1>", unsafe_allow_html=True)
@@ -26,7 +26,7 @@ with st.form("prediction_form"):
 
     with col2:
         lead_pf = st.number_input('Leading Power Factor', value=0.0, format="%.2f")
-        hour = st.slider('Hour of Day', 0, 23, 0)
+        hour = st.slider('Hour of Day', 0, 24, 0)
         day = st.selectbox('Day of Week', ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'])
 
     submitted = st.form_submit_button("Predict")
