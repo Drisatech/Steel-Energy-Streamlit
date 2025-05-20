@@ -1,5 +1,14 @@
 streamlit
-pandas
-scikit-learn
 joblib
+scikit-learn
+pandas
+numpy
+matplotlib
+seaborn
+ucimlrepo
 xgboost
+LinearRegression
+DecisionTree
+SVM
+KNN
+RandomForest

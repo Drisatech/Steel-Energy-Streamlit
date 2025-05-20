@@ -1,4 +1,27 @@
-from sklearn.externals import joblib 
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
+from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
+from sklearn.linear_model import LinearRegression
+from sklearn.tree import DecisionTreeRegressor
+from sklearn.svm import SVR
+from sklearn.neighbors import KNeighborsRegressor
+from sklearn.ensemble import RandomForestRegressor
+from xgboost import XGBRegressor
+from ucimlrepo import fetch_ucirepo
+
+#Train Model
+models = {
+        "Linear Regression": LinearRegression(),
+            "Decision Tree": DecisionTreeRegressor(random_state=42),
+                "SVM": SVR(kernel='rbf'),
+                    "KNN": KNeighborsRegressor(),
+                        "Random Forest": RandomForestRegressor(random_state=42),
+                            "XGBoost": XGBRegressor(random_state=42)                       
+}
 
 # Save model and scaler separately
 joblib.dump(model, 'energy_model.pkl')
