@@ -1,4 +1,4 @@
-import joblib
+from sklearn.externals import joblib 
 
 # Save model and scaler separately
 joblib.dump(model, 'energy_model.pkl')
