@@ -14,7 +14,7 @@ lagging = st.number_input('Lagging_Current_Reactive.Power_kVarh')
 leading = st.number_input('Leading_Current_Reactive_Power_kVarh')
 lag_pf = st.number_input('Lagging_Current_Power_Factor')
 lead_pf = st.number_input('Leading_Current_Power_Factor')
-hour = st.slider('Hour of Day', 0, 23)
+hour = st.slider('Hour of Day', 0, 24)
 
 # One-hot encode day
 day_cols = ['Day_of_week_Friday', 'Day_of_week_Monday', 'Day_of_week_Saturday',
@@ -47,4 +47,4 @@ input_df = input_df.reindex(columns=scaler.feature_names_in_)
 input_scaled = scaler.transform(input_df)
 prediction = model.predict(input_scaled)
 
-st.write(f'Predicted Usage_Kw: {prediction[0]:.2f}')
+st.write(f'Predicted Energy Consumption (Usage_Kw): {prediction[0]:.2f}')
